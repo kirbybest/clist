@@ -1,5 +1,4 @@
-##Functions
-#Create URL Search Query
+# Create URL Search Query -------------------------------------------------
 SearchQuery <- function(area, search_term)
 { 
   search_term = gsub(" ", "+",search_term)
@@ -7,7 +6,8 @@ SearchQuery <- function(area, search_term)
   return(TextToSearch)
 }
 
-##Parse HTML to get out variables 
+
+# Parse HTML to return Variables ------------------------------------------
 parse_html = function(html_rows){
   datetime = html_attr(html_nodes(html_rows, ".result-date"), "datetime")
   posttitle = html_text(html_nodes(html_rows, ".result-title"))
